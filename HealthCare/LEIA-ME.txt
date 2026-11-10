@@ -1,0 +1,43 @@
+HealthCare — pasta portátil
+===========================
+
+O que é
+-------
+Sistema acadêmico de triagem hospitalar (React + Node + SQLite).
+Veio do email "tarefa pi" do Daniel (27/10/2026), arquivo HealthCare.zip.
+
+Pré-requisito (único)
+---------------------
+- Node.js 20 ou superior (https://nodejs.org — versão LTS)
+  Na instalação, marque a opção de adicionar ao PATH.
+
+Como usar (Windows)
+-------------------
+1. Extraia esta pasta onde quiser (caminho sem espaços estranhos ajuda).
+2. Dê dois cliques em INICIAR.bat
+   - Na primeira vez ele roda "npm install" (pode demorar).
+   - Depois sobe a API e o front e abre o navegador.
+3. Front: http://localhost:5173
+   API:  http://localhost:3001/api/health
+4. Para parar: PARAR.bat (ou Ctrl+C na janela do INICIAR).
+
+Dados
+-----
+- Banco SQLite em server\prisma\dev.db (já vem com pacientes de demo).
+- Em modo desenvolvimento a API não exige token.
+- Não use dados reais de pacientes.
+
+Comandos manuais (opcional)
+---------------------------
+npm install
+npm run db:push
+npm run db:seed
+npm run dev
+npm test
+
+Problemas comuns
+----------------
+- "node nao encontrado": reinstale o Node e abra um novo Prompt.
+- Porta em uso: rode PARAR.bat e tente de novo.
+- npm install lento/falha: verifique internet; apague a pasta node_modules e rode INICIAR de novo.
+- Se o front abrir mas a lista ficar vazia: confira se a janela do INICIAR ainda está aberta (API precisa estar rodando).
